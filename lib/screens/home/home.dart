@@ -23,6 +23,7 @@ class _HomeState extends State<Home> {
       'Index 0: Home',
       style: optionStyle,
     ),
+    StoreView(),
     Text(
       'Index 1: Business',
       style: optionStyle,
@@ -41,25 +42,25 @@ class _HomeState extends State<Home> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home,
+              Icons.store,
               color: Colors.black26,
             ),
-            label: 'Home',
+            label: 'Stores',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.business,
+              Icons.emoji_transportation,
               color: Colors.black26,
             ),
-            label: 'Business',
+            label: 'Vehicle',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school, color: Colors.black26),
-            label: 'no issus',
+            icon: Icon(Icons.home_repair_service, color: Colors.black26),
+            label: 'Services',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.supervised_user_circle,
+              Icons.account_circle,
               color: Colors.black26,
             ),
             label: "Profile",
