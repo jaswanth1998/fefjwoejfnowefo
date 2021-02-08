@@ -18,11 +18,7 @@ class _StoreCardState extends State<StoreCard> {
             Row(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Icon(
-                  Icons.margin,
-                  color: Colors.black26,
-                  size: 80,
-                ),
+                Image.asset("./assests/shop1.png", width: 100, height: 100),
                 SizedBox(
                   width: 10,
                 ),
@@ -31,22 +27,67 @@ class _StoreCardState extends State<StoreCard> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text(
-                      "Model Medical Store",
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      "Model Medical Store Name Model",
+                      softWrap: true,
+                      textAlign: TextAlign.left,
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                    ),
+                    SizedBox(
+                      height: 3,
                     ),
                     Text(
-                      "Adress is this",
-                      style: TextStyle(color: Colors.grey),
+                      "Address: Behind Ashoka Garden,Bhopal,MP",
+                      overflow: TextOverflow.ellipsis,
+                      style:
+                          TextStyle(fontWeight: FontWeight.w500, fontSize: 13),
+
+                      // style: TextStyle(color: Colors.grey),
                     ),
                     Text(
-                      "Distamce 2km",
-                      style: TextStyle(color: Colors.grey),
+                      "Distance: 12km away",
+                      style:
+                          TextStyle(fontWeight: FontWeight.w500, fontSize: 13),
+                      // style: TextStyle(color: Colors.grey),
                     ),
-                    SizedBox(height: 10),
-                    RaisedButton(
-                      onPressed: () => {},
-                      child: Text("Call Now"),
-                      color: Colors.redAccent,
+                    SizedBox(height: 3),
+                    Row(
+                      children: [
+                        SizedBox(width: 50),
+                        RaisedButton(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          onPressed: () => {},
+                          child: Row(
+                            children: [
+                              Text(
+                                "CALL NOW",
+                                style: TextStyle(
+                                  color: Color.fromRGBO(255, 180, 0, 1),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Ink(
+                                decoration: ShapeDecoration(
+                                  color: Color.fromRGBO(255, 180, 0, 1),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                ),
+                                child: Icon(
+                                  Icons.phone,
+                                  size: 30,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ],
+                          ),
+                          color: Colors.black,
+                        ),
+                      ],
                     )
                   ],
                 )

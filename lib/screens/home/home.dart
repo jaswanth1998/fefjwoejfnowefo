@@ -41,33 +41,24 @@ class _HomeState extends State<Home> {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.store,
-              color: Colors.black26,
-            ),
+            icon: Icon(Icons.store, color: Colors.red),
             label: 'Stores',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.emoji_transportation,
-              color: Colors.black26,
-            ),
+            icon: Icon(Icons.emoji_transportation, color: Colors.grey),
             label: 'Vehicle',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_repair_service, color: Colors.black26),
+            icon: Icon(Icons.home_repair_service, color: Colors.grey),
             label: 'Services',
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.account_circle,
-              color: Colors.black26,
-            ),
+            icon: Icon(Icons.account_circle, color: Colors.grey),
             label: "Profile",
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.red,
         onTap: _onItemTapped,
       ),
     );
