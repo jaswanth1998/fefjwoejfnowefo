@@ -107,6 +107,7 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                   SizedBox(height: 20),
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -122,9 +123,24 @@ class _HomePageState extends State<HomePage> {
                         contentName: "Albums",
                         imgUrl: "./assests/images/dp4.jpeg",
                       ),
-                      RoundedPic(
-                        contentName: "View All",
-                        imgUrl: "./assests/images/viewAll.jpeg",
+                      GestureDetector(
+                        onTap: () => {
+                          print("i am"),
+                          Navigator.pushNamed(context, '/storeView')
+                        },
+                        child: Column(
+                          children: [
+                            Image.asset("./assests/images/viewAll.jpeg",
+                                fit: BoxFit.cover, height: 80),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              "View All",
+                              style: TextStyle(fontWeight: FontWeight.w500),
+                            )
+                          ],
+                        ),
                       ),
                     ],
                   ),
