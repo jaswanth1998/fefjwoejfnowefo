@@ -126,7 +126,7 @@ class _HomePageState extends State<HomePage> {
                       GestureDetector(
                         onTap: () => {
                           print("i am"),
-                          Navigator.pushNamed(context, '/storeView')
+                          // Navigator.pushNamed(context, '/storeView')
                         },
                         child: Column(
                           children: [

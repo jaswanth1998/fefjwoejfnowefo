@@ -1,3 +1,4 @@
+import 'package:big_medas_app/screens/StoreProfile.dart/StoreProfile.dart';
 import 'package:big_medas_app/screens/home/home.dart';
 import 'package:big_medas_app/screens/stores/StoreView.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
         routes: {
           '/storeView': (context) => StoreView(),
+          '/storeProfile': (context) => StoreProfile(),
         },
         // theme: ThemeData(fontFamily: 'Open_sansregular'),
         debugShowCheckedModeBanner: false,

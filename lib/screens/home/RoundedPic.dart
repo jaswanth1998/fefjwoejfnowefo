@@ -18,10 +18,12 @@ class _RoundedPicState extends State<RoundedPic> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => {
+        Navigator.pushNamed(context, '/storeView')
         // Fluttertoast.showToast(
         //   msg: 'Clicked on ${contentName}',
         //   toastLength: Toast.LENGTH_SHORT,
         //   gravity: ToastGravity.BOTTOM,
+
         // )
       },
       child: Column(

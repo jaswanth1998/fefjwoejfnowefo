@@ -1,5 +1,6 @@
 import 'package:big_medas_app/screens/DriverScreen/DriveScreen.dart';
 import 'package:big_medas_app/screens/DriverScreen/DriverProfile.dart';
+import 'package:big_medas_app/screens/StoreProfile.dart/StoreProfile.dart';
 import 'package:big_medas_app/screens/home/AddAddress.dart';
 import 'package:big_medas_app/screens/home/AppDrawer.dart';
 import 'package:big_medas_app/screens/home/AppDropDown.dart';
@@ -32,8 +33,6 @@ class _HomeState extends State<Home> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
-    DriverProfiel(),
-    DriveScreen(),
     HomePage(),
     ServicesPage(),
     SearchService(),
@@ -42,6 +41,8 @@ class _HomeState extends State<Home> {
     ShowProfile(),
     StoreView(),
     AddAddress(),
+    DriverProfiel(),
+    DriveScreen(),
   ];
 
   @override

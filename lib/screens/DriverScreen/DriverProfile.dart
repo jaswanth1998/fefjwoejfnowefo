@@ -1,3 +1,4 @@
+import 'package:big_medas_app/screens/StoreProfile.dart/ReviewList.dart';
 import 'package:flutter/material.dart';
 
 class DriverProfiel extends StatefulWidget {
@@ -156,138 +157,145 @@ class _DriverProfielState extends State<DriverProfiel> {
           ],
         ),
       ),
-      Container(
-        margin: EdgeInsets.all(8),
-        child: Text(
-          "Baisc Details",
-          style: TextStyle(
-            fontWeight: FontWeight.w900,
-            fontSize: 20,
-            decoration: TextDecoration.underline,
-          ),
-        ),
-      ),
-      Container(
-          margin: EdgeInsets.all(12),
-          child: Text(
-            "Driver Name : XXXX",
-            style: TextStyle(fontWeight: FontWeight.w700),
-          )),
-      Container(
-          margin: EdgeInsets.all(12),
-          child: Text(
-            "Vehicle Name : XXXX",
-            style: TextStyle(fontWeight: FontWeight.w700),
-          )),
-      Container(
-          margin: EdgeInsets.all(12),
-          child: Text(
-            "Booking Capacity : XXXX",
-            style: TextStyle(fontWeight: FontWeight.w700),
-          )),
-      Container(
-          margin: EdgeInsets.all(12),
-          child: Text(
-            "Vehicle Registration Number : XXXX",
-            style: TextStyle(fontWeight: FontWeight.w700),
-          )),
-      Container(
-          margin: EdgeInsets.all(12),
-          child: Text(
-            "Driver's Total Booking : XXXX",
-            style: TextStyle(fontWeight: FontWeight.w700),
-          )),
-      Container(
-          margin: EdgeInsets.all(12),
-          child: Text(
-            "Available : XXXX",
-            style: TextStyle(fontWeight: FontWeight.w700),
-          )),
-      Container(
-          margin: EdgeInsets.all(12),
-          child: Text(
-            "Long Trip Booking : XXXX",
-            style: TextStyle(fontWeight: FontWeight.w700),
-          )),
-      Container(
-          margin: EdgeInsets.all(12),
-          child: Text(
-            "Stated Where Can Freely Go : XXXX",
-            style: TextStyle(fontWeight: FontWeight.w700),
-          )),
-      Container(
-        margin: EdgeInsets.all(8),
-        child: Text(
-          "Vehicle Photos",
-          style: TextStyle(
-            fontWeight: FontWeight.w900,
-            fontSize: 20,
-            decoration: TextDecoration.underline,
-          ),
-        ),
-      ),
-      SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            children: [
-              Container(
-                margin: EdgeInsets.all(10),
-                child: Image.asset(
-                  "./assests/services/vehicle.png",
-                  fit: BoxFit.cover,
+      this.showDetails
+          ? Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  margin: EdgeInsets.all(8),
+                  child: Text(
+                    "Baisc Details",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w900,
+                      fontSize: 20,
+                      decoration: TextDecoration.underline,
+                    ),
+                  ),
                 ),
-              ),
-              Container(
-                margin: EdgeInsets.all(10),
-                child: Image.asset(
-                  "./assests/services/vehicle.png",
-                  fit: BoxFit.cover,
+                Container(
+                    margin: EdgeInsets.all(12),
+                    child: Text(
+                      "Driver Name : XXXX",
+                      style: TextStyle(fontWeight: FontWeight.w700),
+                    )),
+                Container(
+                    margin: EdgeInsets.all(12),
+                    child: Text(
+                      "Vehicle Name : XXXX",
+                      style: TextStyle(fontWeight: FontWeight.w700),
+                    )),
+                Container(
+                    margin: EdgeInsets.all(12),
+                    child: Text(
+                      "Booking Capacity : XXXX",
+                      style: TextStyle(fontWeight: FontWeight.w700),
+                    )),
+                Container(
+                    margin: EdgeInsets.all(12),
+                    child: Text(
+                      "Vehicle Registration Number : XXXX",
+                      style: TextStyle(fontWeight: FontWeight.w700),
+                    )),
+                Container(
+                    margin: EdgeInsets.all(12),
+                    child: Text(
+                      "Driver's Total Booking : XXXX",
+                      style: TextStyle(fontWeight: FontWeight.w700),
+                    )),
+                Container(
+                    margin: EdgeInsets.all(12),
+                    child: Text(
+                      "Available : XXXX",
+                      style: TextStyle(fontWeight: FontWeight.w700),
+                    )),
+                Container(
+                    margin: EdgeInsets.all(12),
+                    child: Text(
+                      "Long Trip Booking : XXXX",
+                      style: TextStyle(fontWeight: FontWeight.w700),
+                    )),
+                Container(
+                    margin: EdgeInsets.all(12),
+                    child: Text(
+                      "Stated Where Can Freely Go : XXXX",
+                      style: TextStyle(fontWeight: FontWeight.w700),
+                    )),
+                Container(
+                  margin: EdgeInsets.all(8),
+                  child: Text(
+                    "Vehicle Photos",
+                    style: TextStyle(
+                      fontWeight: FontWeight.w900,
+                      fontSize: 20,
+                      decoration: TextDecoration.underline,
+                    ),
+                  ),
                 ),
-              ),
-              Container(
-                margin: EdgeInsets.all(10),
-                child: Image.asset(
-                  "./assests/services/vehicle.png",
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.all(10),
-                child: Image.asset(
-                  "./assests/services/vehicle.png",
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.all(10),
-                child: Image.asset(
-                  "./assests/services/vehicle.png",
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.all(10),
-                child: Image.asset(
-                  "./assests/services/vehicle.png",
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.all(10),
-                child: Image.asset(
-                  "./assests/services/vehicle.png",
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.all(10),
-                child: Image.asset(
-                  "./assests/services/vehicle.png",
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ],
-          ))
+                SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.all(10),
+                          child: Image.asset(
+                            "./assests/services/vehicle.png",
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.all(10),
+                          child: Image.asset(
+                            "./assests/services/vehicle.png",
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.all(10),
+                          child: Image.asset(
+                            "./assests/services/vehicle.png",
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.all(10),
+                          child: Image.asset(
+                            "./assests/services/vehicle.png",
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.all(10),
+                          child: Image.asset(
+                            "./assests/services/vehicle.png",
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.all(10),
+                          child: Image.asset(
+                            "./assests/services/vehicle.png",
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.all(10),
+                          child: Image.asset(
+                            "./assests/services/vehicle.png",
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.all(10),
+                          child: Image.asset(
+                            "./assests/services/vehicle.png",
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ],
+                    ))
+              ],
+            )
+          : ReviewListView()
     ]);
   }
 }
