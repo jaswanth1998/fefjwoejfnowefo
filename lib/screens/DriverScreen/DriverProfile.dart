@@ -1,4 +1,14 @@
+import 'package:big_medas_app/screens/DriverScreen/DriveScreen.dart';
+import 'package:big_medas_app/screens/DriverScreen/ScafflodDriverProfile.dart';
 import 'package:big_medas_app/screens/StoreProfile.dart/ReviewList.dart';
+import 'package:big_medas_app/screens/home/AddAddress.dart';
+import 'package:big_medas_app/screens/home/AppDropDown.dart';
+import 'package:big_medas_app/screens/home/DrawerListView.dart';
+import 'package:big_medas_app/screens/home/HomePage.dart';
+import 'package:big_medas_app/screens/home/SearchService.dart';
+import 'package:big_medas_app/screens/home/ShowProfile.dart';
+import 'package:big_medas_app/screens/home/paymentPage.dart';
+import 'package:big_medas_app/screens/stores/StoreView.dart';
 import 'package:flutter/material.dart';
 
 class DriverProfiel extends StatefulWidget {
@@ -9,293 +19,130 @@ class DriverProfiel extends StatefulWidget {
 class _DriverProfielState extends State<DriverProfiel> {
   bool showDetails = true;
 
+  int _selectedIndex = 1;
+  int showIndex = 1;
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+      showIndex = index;
+    });
+  }
+
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static List<Widget> _widgetOptions = <Widget>[
+    HomePage(),
+    ScafFlodDriverProfle(),
+    SearchService(),
+    DrawerListView(),
+    PaymentPage(),
+    ShowProfile(),
+    StoreView(),
+    AddAddress(),
+    DriverProfiel(),
+    DriveScreen(),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return ListView(children: [
-      Container(
-        margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
-        child: Container(
-            height: 160.0,
-            padding: EdgeInsets.all(8.0),
+    return SafeArea(
+      child: Scaffold(
+        // drawer: Drawer(
+        //     child: DrawerListView() // Populate the Drawer in the next step.
+        //     ),
+        appBar: AppBar(
+          iconTheme: IconThemeData(
+            color: Colors.black, //change your color here
+          ),
+          title: Container(
             child: Row(
               children: [
-                Image.asset(
-                  "./assests/services/userLike.jpeg",
-                  fit: BoxFit.cover,
-                ), // width: 100, height: 100),
-                SizedBox(
-                  width: 20,
+                Icon(
+                  Icons.location_on,
+                  size: 30,
+                  color: Colors.green,
                 ),
-                Center(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "This is Driver Name",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w800, fontSize: 18),
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "This is vehicle Name",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.grey),
-                              ),
-                              SizedBox(
-                                height: 3,
-                              ),
-                              Text(
-                                "Distance 1Km",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.grey,
-                                    fontSize: 12),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            width: 18,
-                          ),
-                          Image.asset(
-                            "./assests/services/shareIt.jpeg",
-                            width: 50,
-                            height: 50,
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          FlatButton(
-                              color: Color.fromRGBO(241, 79, 90, 1),
-                              onPressed: () => {},
-                              child: Text(
-                                "Call Now",
-                                style: TextStyle(color: Colors.white),
-                              )),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          SizedBox(
-                            child: FlatButton(
-                                color: Color.fromRGBO(254, 241, 0, 1),
-                                onPressed: () => {},
-                                child: Text(
-                                  "Book Now",
-                                  style: TextStyle(color: Colors.black),
-                                )),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                )
+                SizedBox(
+                  width: 4,
+                ),
+                AppDropDown()
               ],
-            )),
-      ),
-      Container(
-        margin: EdgeInsets.all(12),
-        height: 40,
-        decoration: BoxDecoration(border: Border.all(color: Colors.black)),
-        child: Flex(
-          direction: Axis.horizontal,
-          children: [
-            Expanded(
+            ),
+          ),
+          backgroundColor: Colors.grey[100],
+          // backgroundColor: Color.fromRGBO(255, 255, 255, 1),
+          // bottom: PreferredSize(
+          //     child: Container(
+          //       color: Color.fromRGBO(128, 76, 71, 1),
+          //       height: 4.0,
+          //     ),
+          //     preferredSize: Size.fromHeight(4.0)),
+          actions: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: () {
+                  setState(() {
+                    showIndex = 5;
+                  });
+                },
                 child: Container(
-              child: FlatButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(9.0),
-                      side: BorderSide(
-                          color: this.showDetails ? Colors.red : Colors.white)),
-                  color: this.showDetails
-                      ? Color.fromRGBO(181, 44, 94, 1)
-                      : Colors.white,
-                  onPressed: () => {
-                        this.setState(() {
-                          this.showDetails = true;
-                        })
-                      },
-                  child: Text(
-                    "Details",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: this.showDetails ? Colors.white : Colors.black),
-                  )),
-            )),
-            Expanded(
-                child: FlatButton(
-                    color: !this.showDetails
-                        ? Color.fromRGBO(181, 44, 94, 1)
-                        : Colors.white,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(9.0),
-                        side: BorderSide(
-                            color:
-                                !this.showDetails ? Colors.red : Colors.white)),
-                    onPressed: () => {
-                          this.setState(() {
-                            this.showDetails = false;
-                          })
-                        },
-                    child: Text(
-                      "Reviews",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, color: Colors.black),
-                    )))
+                  padding: EdgeInsets.all(1.0),
+                  child: Icon(
+                    Icons.account_box,
+                    size: 30,
+                    color: showIndex == 5 ? Colors.red : Colors.grey,
+                  ),
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () => {
+                setState(() {
+                  showIndex = 4;
+                })
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Icon(
+                  Icons.shopping_cart,
+                  size: 30,
+                  color: showIndex == 4 ? Colors.red : Colors.grey,
+                ),
+              ),
+            ),
           ],
         ),
+        body: _widgetOptions.elementAt(showIndex),
+        bottomNavigationBar: BottomNavigationBar(
+          items: <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.store,
+                  color: showIndex == 0 ? Colors.red : Colors.grey),
+              label: 'Stores',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.emoji_transportation,
+                  color: showIndex == 1 ? Colors.red : Colors.grey),
+              label: 'Vehicle',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home_repair_service,
+                  color: showIndex == 2 ? Colors.red : Colors.grey),
+              label: 'Services',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle,
+                  color: showIndex == 3 ? Colors.red : Colors.grey),
+              label: "Profile",
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.red,
+          onTap: _onItemTapped,
+        ),
       ),
-      this.showDetails
-          ? Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  margin: EdgeInsets.all(8),
-                  child: Text(
-                    "Baisc Details",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w900,
-                      fontSize: 20,
-                      decoration: TextDecoration.underline,
-                    ),
-                  ),
-                ),
-                Container(
-                    margin: EdgeInsets.all(12),
-                    child: Text(
-                      "Driver Name : XXXX",
-                      style: TextStyle(fontWeight: FontWeight.w700),
-                    )),
-                Container(
-                    margin: EdgeInsets.all(12),
-                    child: Text(
-                      "Vehicle Name : XXXX",
-                      style: TextStyle(fontWeight: FontWeight.w700),
-                    )),
-                Container(
-                    margin: EdgeInsets.all(12),
-                    child: Text(
-                      "Booking Capacity : XXXX",
-                      style: TextStyle(fontWeight: FontWeight.w700),
-                    )),
-                Container(
-                    margin: EdgeInsets.all(12),
-                    child: Text(
-                      "Vehicle Registration Number : XXXX",
-                      style: TextStyle(fontWeight: FontWeight.w700),
-                    )),
-                Container(
-                    margin: EdgeInsets.all(12),
-                    child: Text(
-                      "Driver's Total Booking : XXXX",
-                      style: TextStyle(fontWeight: FontWeight.w700),
-                    )),
-                Container(
-                    margin: EdgeInsets.all(12),
-                    child: Text(
-                      "Available : XXXX",
-                      style: TextStyle(fontWeight: FontWeight.w700),
-                    )),
-                Container(
-                    margin: EdgeInsets.all(12),
-                    child: Text(
-                      "Long Trip Booking : XXXX",
-                      style: TextStyle(fontWeight: FontWeight.w700),
-                    )),
-                Container(
-                    margin: EdgeInsets.all(12),
-                    child: Text(
-                      "Stated Where Can Freely Go : XXXX",
-                      style: TextStyle(fontWeight: FontWeight.w700),
-                    )),
-                Container(
-                  margin: EdgeInsets.all(8),
-                  child: Text(
-                    "Vehicle Photos",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w900,
-                      fontSize: 20,
-                      decoration: TextDecoration.underline,
-                    ),
-                  ),
-                ),
-                SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.all(10),
-                          child: Image.asset(
-                            "./assests/services/vehicle.png",
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.all(10),
-                          child: Image.asset(
-                            "./assests/services/vehicle.png",
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.all(10),
-                          child: Image.asset(
-                            "./assests/services/vehicle.png",
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.all(10),
-                          child: Image.asset(
-                            "./assests/services/vehicle.png",
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.all(10),
-                          child: Image.asset(
-                            "./assests/services/vehicle.png",
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.all(10),
-                          child: Image.asset(
-                            "./assests/services/vehicle.png",
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.all(10),
-                          child: Image.asset(
-                            "./assests/services/vehicle.png",
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.all(10),
-                          child: Image.asset(
-                            "./assests/services/vehicle.png",
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ],
-                    ))
-              ],
-            )
-          : ReviewListView()
-    ]);
+    );
   }
 }

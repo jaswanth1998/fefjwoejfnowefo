@@ -1,6 +1,7 @@
 import 'package:big_medas_app/screens/CartPage.dart';
-import 'package:big_medas_app/screens/DriverScreen/DriverCard.dart';
-import 'package:big_medas_app/screens/DriverScreen/DriverDropDown.dart';
+import 'package:big_medas_app/screens/DriverScreen/DriveScreen.dart';
+import 'package:big_medas_app/screens/DriverScreen/DriverProfile.dart';
+import 'package:big_medas_app/screens/ServcieProvider/ServiceProviderCard.dart';
 import 'package:big_medas_app/screens/home/AddAddress.dart';
 import 'package:big_medas_app/screens/home/AppDropDown.dart';
 import 'package:big_medas_app/screens/home/DrawerListView.dart';
@@ -12,16 +13,14 @@ import 'package:big_medas_app/screens/home/servicesPage.dart';
 import 'package:big_medas_app/screens/stores/StoreView.dart';
 import 'package:flutter/material.dart';
 
-import 'DriverProfile.dart';
-
-class DriveScreen extends StatefulWidget {
+class ServiceProviderList extends StatefulWidget {
   @override
-  _DriveScreenState createState() => _DriveScreenState();
+  _ServiceProviderListState createState() => _ServiceProviderListState();
 }
 
-class _DriveScreenState extends State<DriveScreen> {
-  int _selectedIndex = 1;
-  int showIndex = 1;
+class _ServiceProviderListState extends State<ServiceProviderList> {
+  int _selectedIndex = 2;
+  int showIndex = 2;
 
   void _onItemTapped(int index) {
     setState(() {
@@ -34,85 +33,59 @@ class _DriveScreenState extends State<DriveScreen> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
     HomePage(),
+    ServicesPage(),
     Container(
-      padding: EdgeInsets.all(12),
       child: ListView(
         children: [
-          TextField(
-            // controller: controller,
-            // focusNode: focusNode,
-            style: TextStyle(fontSize: 16, color: Colors.grey[600]),
-            decoration: InputDecoration(
-              enabledBorder: const OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Color(0x4437474F),
-                ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                  // borderSide: BorderSide(color: Theme.of(context).primaryColor),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextField(
+              // controller: controller,
+              // focusNode: focusNode,
+              style: TextStyle(fontSize: 16, color: Colors.grey[600]),
+              decoration: InputDecoration(
+                enabledBorder: const OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Color(0x4437474F),
                   ),
-              prefixIcon: Icon(Icons.search),
-              border: InputBorder.none,
-              hintText: "Search by driver name",
-              contentPadding: const EdgeInsets.only(
-                left: 16,
-                right: 20,
-                top: 14,
-                bottom: 14,
+                ),
+                focusedBorder: OutlineInputBorder(
+                    // borderSide:
+                    // BorderSide(color: Theme.of(context).primaryColor),
+                    ),
+                prefixIcon: Icon(Icons.search),
+                border: InputBorder.none,
+                hintText: "Search for store/item",
+                contentPadding: const EdgeInsets.only(
+                  left: 16,
+                  right: 20,
+                  top: 14,
+                  bottom: 14,
+                ),
               ),
             ),
           ),
           SizedBox(
-            height: 15,
+            height: 10,
           ),
-          Row(
-            children: [
-              Text(
-                "200 Drivers Are Near you",
-                style: TextStyle(fontWeight: FontWeight.w600),
-              ),
-              SizedBox(
-                width: 40,
-              ),
-              Flexible(
-                child: TextField(
-                  // controller: controller,
-                  // focusNode: focusNode,
-                  style: TextStyle(fontSize: 12, color: Colors.grey[600]),
-                  decoration: InputDecoration(
-                    enabledBorder: const OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Color(0x4437474F),
-                      ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                        // borderSide: BorderSide(color: Theme.of(context).primaryColor),
-                        ),
-                    // prefixIcon: Icon(Icons.search),
-                    border: InputBorder.none,
-                    hintText: "Search for vehicle",
-                    contentPadding: const EdgeInsets.only(
-                      left: 16,
-                      right: 20,
-                      top: 14,
-                      bottom: 14,
-                    ),
-                  ),
-                ),
-              )
-            ],
+          Container(
+            padding: EdgeInsets.all(8.0),
+            child: Text(
+              "500 Service Providers",
+              style: TextStyle(fontWeight: FontWeight.w600),
+            ),
           ),
           SizedBox(
             height: 10,
           ),
-          DriverCard(),
-          DriverCard(),
-          DriverCard(),
-          DriverCard(),
+          ServiceProviderCard(),
+          ServiceProviderCard(),
+          ServiceProviderCard(),
+          ServiceProviderCard(),
+          ServiceProviderCard(),
         ],
       ),
     ),
-    SearchService(),
     DrawerListView(),
     CartPage(),
     ShowProfile(),
@@ -120,36 +93,28 @@ class _DriveScreenState extends State<DriveScreen> {
     AddAddress(),
     DriverProfiel(),
     DriveScreen(),
+    ServiceProviderList(),
   ];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        // drawer: Drawer(
-        //     child: DrawerListView() // Populate the Drawer in the next step.
-        //     ),
         appBar: AppBar(
-          // automaticallyImplyLeading: false,
-          iconTheme: IconThemeData(
-            color: Colors.black, //change your color here
-          ),
-          title: Container(
-            child: Row(
-              children: [
-                Icon(
-                  Icons.location_on,
-                  size: 30,
-                  color: Colors.green,
-                ),
-                SizedBox(
-                  width: 4,
-                ),
-                AppDropDown()
-              ],
-            ),
+          iconTheme: IconThemeData(color: Colors.black),
+          title: Row(
+            children: [
+              Icon(
+                Icons.location_on,
+                size: 30,
+                color: Colors.green,
+              ),
+              SizedBox(
+                width: 4,
+              ),
+              AppDropDown()
+            ],
           ),
           backgroundColor: Colors.grey[100],
-          // backgroundColor: Color.fromRGBO(255, 255, 255, 1),
           // bottom: PreferredSize(
           //     child: Container(
           //       color: Color.fromRGBO(128, 76, 71, 1),

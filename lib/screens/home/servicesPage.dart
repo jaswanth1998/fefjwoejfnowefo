@@ -1,4 +1,5 @@
 import 'package:big_medas_app/screens/home/RoundedPic.dart';
+import 'package:big_medas_app/screens/home/RoundedVechicle.dart';
 import 'package:flutter/material.dart';
 
 class ServicesPage extends StatefulWidget {
@@ -46,23 +47,23 @@ class _ServicesPageState extends State<ServicesPage> {
                   //             image: new NetworkImage(
                   //                 "./assests/images/service1.jpeg")))),
 
-                  RoundedPic(
+                  RoundedVechicle(
                     contentName: "",
                     imgUrl: "./assests/images/service1.jpeg",
                   ),
-                  RoundedPic(
+                  RoundedVechicle(
                     contentName: "",
                     imgUrl: "./assests/images/service2.jpeg",
                   ),
-                  RoundedPic(
+                  RoundedVechicle(
                     contentName: "",
                     imgUrl: "./assests/images/service3.jpeg",
                   ),
-                  RoundedPic(
+                  RoundedVechicle(
                     contentName: "",
                     imgUrl: "./assests/images/service4.jpeg",
                   ),
-                  RoundedPic(
+                  RoundedVechicle(
                     contentName: "",
                     imgUrl: "./assests/images/service5.jpeg",
                   ),

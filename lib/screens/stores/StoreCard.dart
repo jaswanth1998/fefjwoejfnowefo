@@ -30,7 +30,7 @@ class _StoreCardState extends State<StoreCard> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Text(
-                        "Model Medical Store Name Model",
+                        "Model Medical Store Name is This",
                         softWrap: true,
                         textAlign: TextAlign.left,
                         style: TextStyle(

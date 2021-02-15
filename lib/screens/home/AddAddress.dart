@@ -31,6 +31,7 @@ class _AddAddressState extends State<AddAddress> {
           TextFormField(
             decoration: new InputDecoration(
               hintText: 'First Name',
+              hintStyle: TextStyle(fontSize: 12),
             ),
           ),
           SizedBox(
@@ -39,6 +40,7 @@ class _AddAddressState extends State<AddAddress> {
           TextFormField(
             decoration: new InputDecoration(
               hintText: 'Last Name',
+              hintStyle: TextStyle(fontSize: 12),
             ),
           ),
           SizedBox(
@@ -47,6 +49,7 @@ class _AddAddressState extends State<AddAddress> {
           TextFormField(
             decoration: new InputDecoration(
               hintText: 'Address',
+              hintStyle: TextStyle(fontSize: 12),
             ),
           ),
           SizedBox(
@@ -55,6 +58,7 @@ class _AddAddressState extends State<AddAddress> {
           TextFormField(
             decoration: new InputDecoration(
               hintText: 'City',
+              hintStyle: TextStyle(fontSize: 12),
             ),
           ),
           SizedBox(
@@ -63,6 +67,7 @@ class _AddAddressState extends State<AddAddress> {
           TextFormField(
             decoration: new InputDecoration(
               hintText: 'Pincode',
+              hintStyle: TextStyle(fontSize: 12),
             ),
           ),
           SizedBox(
@@ -71,6 +76,7 @@ class _AddAddressState extends State<AddAddress> {
           TextFormField(
             decoration: new InputDecoration(
               hintText: 'Email',
+              hintStyle: TextStyle(fontSize: 12),
             ),
           ),
           SizedBox(
@@ -79,6 +85,7 @@ class _AddAddressState extends State<AddAddress> {
           TextFormField(
             decoration: new InputDecoration(
               hintText: 'Phone Number',
+              hintStyle: TextStyle(fontSize: 12),
             ),
           ),
           SizedBox(
@@ -91,18 +98,28 @@ class _AddAddressState extends State<AddAddress> {
           TextFormField(
             decoration: new InputDecoration(
               hintText: 'State',
+              hintStyle: TextStyle(fontSize: 12),
             ),
           ),
           SizedBox(
             height: 20,
           ),
           Center(
-            child: Text(
-              "Proceed",
-              style: TextStyle(
-                  fontSize: 25,
-                  color: Color.fromRGBO(185, 58, 69, 1),
-                  fontWeight: FontWeight.w800),
+            child: Container(
+              padding: EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.green,
+                    width: 5,
+                  ),
+                  borderRadius: BorderRadius.circular(8.0)),
+              child: Text(
+                "Proceed",
+                style: TextStyle(
+                    fontSize: 25,
+                    color: Color.fromRGBO(185, 58, 69, 1),
+                    fontWeight: FontWeight.w800),
+              ),
             ),
           )
         ],

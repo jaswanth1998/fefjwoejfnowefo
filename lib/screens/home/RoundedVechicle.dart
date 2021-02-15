@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
-// import 'package:fluttertoast/fluttertoast.dart';
 
-class RoundedPic extends StatefulWidget {
+class RoundedVechicle extends StatefulWidget {
   String contentName;
   String imgUrl;
-  RoundedPic({this.contentName, this.imgUrl});
+  RoundedVechicle({this.contentName, this.imgUrl});
   @override
-  _RoundedPicState createState() =>
-      _RoundedPicState(contentName: this.contentName, imgUrl: this.imgUrl);
+  _RoundedVechicleState createState() =>
+      _RoundedVechicleState(contentName: this.contentName, imgUrl: this.imgUrl);
 }
 
-class _RoundedPicState extends State<RoundedPic> {
+class _RoundedVechicleState extends State<RoundedVechicle> {
   String contentName;
   String imgUrl;
-  _RoundedPicState({this.contentName, this.imgUrl});
+  _RoundedVechicleState({this.contentName, this.imgUrl});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => {Navigator.pushNamed(context, '/storeView')},
+      onTap: () => {Navigator.pushNamed(context, '/vScreen')},
       child: Column(
         children: [
           Image.asset(imgUrl, fit: BoxFit.cover, height: 80),
@@ -42,5 +41,6 @@ class _RoundedPicState extends State<RoundedPic> {
         ],
       ),
     );
+    ;
   }
 }

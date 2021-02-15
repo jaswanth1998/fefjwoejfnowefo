@@ -1,15 +1,6 @@
-import 'package:big_medas_app/screens/Bookings/CarBooking.dart';
-import 'package:big_medas_app/screens/Bookings/VendorHiring.dart';
 import 'package:big_medas_app/screens/CartPage.dart';
-import 'package:big_medas_app/screens/DriverScreen/DriveScreen.dart';
-import 'package:big_medas_app/screens/DriverScreen/DriverProfile.dart';
 import 'package:big_medas_app/screens/OrderHistory/OrderHistory.dart';
-import 'package:big_medas_app/screens/ServcieProvider/ScafflodServiceProfile.dart';
-import 'package:big_medas_app/screens/ServcieProvider/ServiceProviderList.dart';
-import 'package:big_medas_app/screens/StoreProfile.dart/StoreProfile.dart';
-import 'package:big_medas_app/screens/WishList/WishList.dart';
 import 'package:big_medas_app/screens/home/AddAddress.dart';
-import 'package:big_medas_app/screens/home/AppDrawer.dart';
 import 'package:big_medas_app/screens/home/AppDropDown.dart';
 import 'package:big_medas_app/screens/home/DrawerListView.dart';
 import 'package:big_medas_app/screens/home/HomePage.dart';
@@ -17,19 +8,17 @@ import 'package:big_medas_app/screens/home/SearchService.dart';
 import 'package:big_medas_app/screens/home/ShowProfile.dart';
 import 'package:big_medas_app/screens/home/paymentPage.dart';
 import 'package:big_medas_app/screens/home/servicesPage.dart';
-import 'package:big_medas_app/screens/stores/ListOfStore.dart';
 import 'package:big_medas_app/screens/stores/StoreView.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
-class Home extends StatefulWidget {
+class ScafFlodOrders extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _ScafFlodOrdersState createState() => _ScafFlodOrdersState();
 }
 
-class _HomeState extends State<Home> {
-  int _selectedIndex = 0;
-  int showIndex = 0;
+class _ScafFlodOrdersState extends State<ScafFlodOrders> {
+  int _selectedIndex = 3;
+  int showIndex = 3;
 
   void _onItemTapped(int index) {
     setState(() {
@@ -44,20 +33,20 @@ class _HomeState extends State<Home> {
     HomePage(),
     ServicesPage(),
     SearchService(),
-    DrawerListView(),
+    OrderHistory(),
     CartPage(),
     ShowProfile(),
     StoreView(),
     AddAddress(),
-    DriverProfiel(),
-    DriveScreen(),
-    ServiceProviderList(),
-    ScafflodServiceProfile(),
-    OrderHistory(),
-    WishList(),
-    VendorHiring(),
-    CarBooking(),
-    CartPage(),
+    // DriverProfiel(),
+    // DriveScreen(),
+    // ServiceProviderList(),
+    // ScafflodServiceProfile(),
+    // OrderHistory(),
+    // WishList(),
+    // VendorHiring(),
+    // CarBooking(),
+    // CartPage(),
     AddAddress(),
   ];
 

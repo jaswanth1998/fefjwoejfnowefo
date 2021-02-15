@@ -1,23 +1,23 @@
 import 'package:big_medas_app/screens/CartPage.dart';
+import 'package:big_medas_app/screens/WishList/WishList.dart';
 import 'package:big_medas_app/screens/home/AddAddress.dart';
 import 'package:big_medas_app/screens/home/AppDropDown.dart';
-import 'package:big_medas_app/screens/home/DrawerListView.dart';
 import 'package:big_medas_app/screens/home/HomePage.dart';
 import 'package:big_medas_app/screens/home/SearchService.dart';
 import 'package:big_medas_app/screens/home/ShowProfile.dart';
 import 'package:big_medas_app/screens/home/paymentPage.dart';
 import 'package:big_medas_app/screens/home/servicesPage.dart';
-import 'package:big_medas_app/screens/stores/ListOfStore.dart';
+import 'package:big_medas_app/screens/stores/StoreView.dart';
 import 'package:flutter/material.dart';
 
-class StoreView extends StatefulWidget {
+class ScafFlodwishList extends StatefulWidget {
   @override
-  _StoreViewState createState() => _StoreViewState();
+  _ScafFlodwishListState createState() => _ScafFlodwishListState();
 }
 
-class _StoreViewState extends State<StoreView> {
-  int _selectedIndex = 0;
-  int showIndex = 0;
+class _ScafFlodwishListState extends State<ScafFlodwishList> {
+  int _selectedIndex = 3;
+  int showIndex = 3;
 
   void _onItemTapped(int index) {
     setState(() {
@@ -29,82 +29,46 @@ class _StoreViewState extends State<StoreView> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
-    Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-          child: TextField(
-            // controller: controller,
-            // focusNode: focusNode,
-            style: TextStyle(fontSize: 16, color: Colors.grey[600]),
-            decoration: InputDecoration(
-              enabledBorder: const OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Color(0x4437474F),
-                ),
-              ),
-              focusedBorder: OutlineInputBorder(
-                  // borderSide:
-                  //     BorderSide(color: ),
-                  ),
-              suffixIcon: Icon(Icons.search),
-              border: InputBorder.none,
-              hintText: "Search for store/item",
-              contentPadding: const EdgeInsets.only(
-                left: 16,
-                right: 20,
-                top: 14,
-                bottom: 14,
-              ),
-            ),
-          ),
-        ),
-        Expanded(
-          child: ListOfStore(),
-        )
-      ],
-    ),
+    HomePage(),
     ServicesPage(),
     SearchService(),
-    DrawerListView(),
+    WishList(),
     CartPage(),
     ShowProfile(),
     StoreView(),
     AddAddress(),
+    // DriverProfiel(),
+    // DriveScreen(),
+    // ServiceProviderList(),
+    // ScafflodServiceProfile(),
+    // OrderHistory(),
+    // WishList(),
+    // VendorHiring(),
+    // CarBooking(),
+    // CartPage(),
+    // AddAddress(),
   ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        // drawer: Drawer(
-        //     child: DrawerListView() // Populate the Drawer in the next step.
-        //     ),
         appBar: AppBar(
-          iconTheme: IconThemeData(
-            color: Colors.black, //change your color here
-          ),
-          title: Container(
-            child: Row(
-              children: [
-                Icon(
-                  Icons.location_on,
-                  size: 30,
-                  color: Colors.green,
-                ),
-                SizedBox(
-                  width: 4,
-                ),
-                AppDropDown()
-              ],
-            ),
+          iconTheme: IconThemeData(color: Colors.black),
+          title: Row(
+            children: [
+              Icon(
+                Icons.location_on,
+                size: 30,
+                color: Colors.green,
+              ),
+              SizedBox(
+                width: 4,
+              ),
+              AppDropDown()
+            ],
           ),
           backgroundColor: Colors.grey[100],
-          // bottom: PreferredSize(
-          //     child: Container(
-          //       color: Color.fromRGBO(128, 76, 71, 1),
-          //       height: 4.0,
-          //     ),
-          //     preferredSize: Size.fromHeight(4.0)),
           // bottom: PreferredSize(
           //     child: Container(
           //       color: Color.fromRGBO(128, 76, 71, 1),
@@ -177,6 +141,5 @@ class _StoreViewState extends State<StoreView> {
         ),
       ),
     );
-    ;
   }
 }
