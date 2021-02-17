@@ -35,59 +35,8 @@ class _CartPageState extends State<CartPage> {
               fit: BoxFit.fill,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(18.0),
-            child: Flex(
-              direction: Axis.horizontal,
-              children: [
-                Expanded(
-                    child: TextField(
-                  style: TextStyle(
-                      fontSize: 12.0, height: 1.0, color: Colors.black),
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Coupon code',
-                  ),
-                )
-                    //     child: TextFormField(
-                    //   decoration: new InputDecoration(
-                    //       focusedBorder: OutlineInputBorder(
-                    //         borderSide:
-                    //             BorderSide(color: Colors.grey[400], width: 1.0),
-                    //       ),
-                    //       enabledBorder: OutlineInputBorder(
-                    //         borderSide:
-                    //             BorderSide(color: Colors.grey[400], width: 1.0),
-                    //       ),
-                    //       hintText: 'Coupon Code',
-                    //       hintStyle: TextStyle(
-                    //           color: Colors.grey[500],
-                    //           fontWeight: FontWeight.w800)),
-                    // )
-                    ),
-                Container(
-                  margin: EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                      border: Border.all(
-                    color: Color.fromRGBO(0, 206, 209, 1),
-                  )),
-                  child: FlatButton(
-                      onPressed: null,
-                      child: Text(
-                        "Apply",
-                        style: TextStyle(
-                            color: Color.fromRGBO(0, 206, 209, 1),
-                            fontWeight: FontWeight.w800),
-                      )),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            height: 1,
-            margin: EdgeInsets.fromLTRB(8, 0, 8, 8),
-            decoration:
-                BoxDecoration(border: Border.all(color: Colors.grey[400])),
+          SizedBox(
+            height: 80,
           ),
           Container(
             margin: EdgeInsets.all(18),

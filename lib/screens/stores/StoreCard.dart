@@ -21,7 +21,11 @@ class _StoreCardState extends State<StoreCard> {
               Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Image.asset("./assests/shop1.png", width: 100, height: 100),
+                  Container(
+                      height: 100,
+                      width: 100,
+                      child: Image.asset("./assests/shop1.png",
+                          fit: BoxFit.cover)),
                   SizedBox(
                     width: 10,
                   ),

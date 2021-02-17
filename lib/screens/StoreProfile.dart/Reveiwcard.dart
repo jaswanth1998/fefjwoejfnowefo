@@ -14,7 +14,16 @@ class ReviewCard extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Image.asset("./assests/services/userFace.png"),
+            // circular_image1
+            child: rating % 2 == 0
+                ? Image.asset(
+                    "./assests/services/circular_image1.png",
+                    height: 60,
+                  )
+                : Image.asset(
+                    "./assests/services/circular_image2.png",
+                    height: 60,
+                  ),
           ),
           Expanded(
             child: Column(

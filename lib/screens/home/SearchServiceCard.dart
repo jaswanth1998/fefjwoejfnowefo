@@ -23,21 +23,23 @@ class _SearchServiceCardState extends State<SearchServiceCard> {
         elevation: 12,
         child: Column(
           children: [
-            Image.asset(
-              imgUrl,
-              fit: BoxFit.cover,
+            Container(
+              child: Image.asset(
+                imgUrl,
+                fit: BoxFit.cover,
+              ),
             ),
-            SizedBox(
-              height: 5,
-            ),
-            Center(
-                child: Text(
-              content,
-              style: TextStyle(
-                  color: Color.fromRGBO(223, 194, 81, 1),
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800),
-            ))
+            Container(
+              height: 20,
+              child: Center(
+                  child: Text(
+                content,
+                style: TextStyle(
+                    color: Color.fromRGBO(223, 194, 81, 1),
+                    fontSize: 16,
+                    fontWeight: FontWeight.w800),
+              )),
+            )
           ],
         ),
       ),

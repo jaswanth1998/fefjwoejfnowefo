@@ -33,12 +33,19 @@ class _ScafFlodStoreViewState extends State<ScafFlodStoreView> {
       Container(
         margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
         child: Container(
-            height: 160.0,
+            height: 150.0,
             padding: EdgeInsets.all(8.0),
             child: Row(
               children: [
-                Image.asset("./assests/services/fotter.jpg",
-                    width: 100, height: 100),
+                Container(
+                  margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
+                  width: 120,
+                  height: 150,
+                  child: Image.asset(
+                    "./assests/images/3.jpg",
+                    fit: BoxFit.fill,
+                  ),
+                ),
                 SizedBox(
                   width: 20,
                 ),
@@ -81,11 +88,6 @@ class _ScafFlodStoreViewState extends State<ScafFlodStoreView> {
                           SizedBox(
                             width: 18,
                           ),
-                          Image.asset(
-                            "./assests/services/like.jpg",
-                            width: 30,
-                            height: 30,
-                          ),
                         ],
                       ),
                       SizedBox(
@@ -94,13 +96,13 @@ class _ScafFlodStoreViewState extends State<ScafFlodStoreView> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          FlatButton(
-                              color: Color.fromRGBO(241, 79, 90, 1),
-                              onPressed: () => {},
-                              child: Text(
-                                "Call Now",
-                                style: TextStyle(color: Colors.white),
-                              )),
+                          InkWell(
+                            child: Image.asset(
+                              "./assests/services/call-now.png",
+                              width: 100,
+                              height: 60,
+                            ),
+                          ),
                           SizedBox(
                             width: 10,
                           ),
@@ -108,6 +110,7 @@ class _ScafFlodStoreViewState extends State<ScafFlodStoreView> {
                             child: Image.asset(
                               "./assests/services/share.png",
                               width: 100,
+                              height: 60,
                             ),
                           ),
                         ],

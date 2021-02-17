@@ -18,8 +18,8 @@ class _ScafflodServiceProfileState extends State<ScafflodServiceProfile> {
             padding: EdgeInsets.all(8.0),
             child: Row(
               children: [
-                Image.asset("./assests/services/userLike.jpeg",
-                    width: 100, height: 100),
+                Image.asset("./assests/services/userl.jpeg",
+                    fit: BoxFit.fill, width: 130, height: 150),
                 SizedBox(
                   width: 20,
                 ),
@@ -75,18 +75,21 @@ class _ScafflodServiceProfileState extends State<ScafflodServiceProfile> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          FlatButton(
-                              color: Color.fromRGBO(241, 79, 90, 1),
-                              onPressed: () => {},
-                              child: Text(
-                                "Call Now",
-                                style: TextStyle(color: Colors.white),
-                              )),
+                          InkWell(
+                            child: Image.asset(
+                              "./assests/services/call-now.png",
+                              width: 100,
+                              height: 50,
+                            ),
+                          ),
                           SizedBox(
                             width: 10,
                           ),
                           SizedBox(
-                            child: FlatButton(
+                            child: RaisedButton(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(18.0),
+                                ),
                                 color: Color.fromRGBO(254, 241, 0, 1),
                                 onPressed: () => {
                                       Navigator.pushNamed(

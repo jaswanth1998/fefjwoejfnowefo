@@ -20,8 +20,8 @@ class _ServiceProviderCardState extends State<ServiceProviderCard> {
               padding: EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  Image.asset("./assests/services/driverLogo.png",
-                      width: 100, height: 100),
+                  Image.asset("./assests/services/circular_image1.png",
+                      fit: BoxFit.fill, width: 110, height: 110),
                   SizedBox(
                     width: 20,
                   ),

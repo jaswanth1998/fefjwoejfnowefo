@@ -27,10 +27,10 @@ class _CarBookingState extends State<CarBooking> {
             TextFormField(
               decoration: new InputDecoration(
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black, width: 3.0),
+                    borderSide: BorderSide(color: Colors.black, width: 1.0),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black, width: 3.0),
+                    borderSide: BorderSide(color: Colors.black, width: 1.0),
                   ),
                   hintText: 'Select Date',
                   hintStyle: TextStyle(
@@ -42,10 +42,10 @@ class _CarBookingState extends State<CarBooking> {
             TextFormField(
               decoration: new InputDecoration(
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black, width: 3.0),
+                    borderSide: BorderSide(color: Colors.black, width: 1.0),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black, width: 3.0),
+                    borderSide: BorderSide(color: Colors.black, width: 1.0),
                   ),
                   hintText: 'Select Time',
                   hintStyle: TextStyle(
@@ -57,10 +57,10 @@ class _CarBookingState extends State<CarBooking> {
             TextFormField(
               decoration: new InputDecoration(
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black, width: 3.0),
+                    borderSide: BorderSide(color: Colors.black, width: 1.0),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black, width: 3.0),
+                    borderSide: BorderSide(color: Colors.black, width: 1.0),
                   ),
                   hintText: 'Pickup From',
                   hintStyle: TextStyle(
@@ -74,10 +74,10 @@ class _CarBookingState extends State<CarBooking> {
               // maxLines: 4,
               decoration: new InputDecoration(
                   focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black, width: 3.0),
+                    borderSide: BorderSide(color: Colors.black, width: 1.0),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black, width: 3.0),
+                    borderSide: BorderSide(color: Colors.black, width: 1.0),
                   ),
                   hintText: 'Drop Location',
                   hintStyle: TextStyle(

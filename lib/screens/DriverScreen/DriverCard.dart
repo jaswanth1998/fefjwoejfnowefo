@@ -18,8 +18,8 @@ class _DriverCardState extends State<DriverCard> {
             padding: EdgeInsets.all(8.0),
             child: Row(
               children: [
-                Image.asset("./assests/services/driverLogo.png",
-                    width: 100, height: 100),
+                Image.asset("./assests/services/userl.jpeg",
+                    fit: BoxFit.fill, width: 100, height: 120),
                 SizedBox(
                   width: 20,
                 ),

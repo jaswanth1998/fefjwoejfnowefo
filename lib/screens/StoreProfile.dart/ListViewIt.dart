@@ -13,15 +13,15 @@ class _ListViewItState extends State<ListViewIt> {
       children: [
         StoreProductsPage(
           title: "Doctor\'s Choice Absorbent Cotton Wool l.P",
-          subTitle: "\u20A8 225 \n400Gm'",
+          subTitle: "\u20A8 225 / 400Gm'",
         ),
         StoreProductsPage(
           title: "Doctors Choice Cotton",
-          subTitle: "\u20A8 110 \n200Gms'",
+          subTitle: "\u20A8 110 / 200Gms'",
         ),
         StoreProductsPage(
           title: "Gillette Lemon Lime Foam",
-          subTitle: "\u20A8 175 \n196Gm'",
+          subTitle: "\u20A8 175 / 196Gm'",
         ),
         // Expanded(child: null),
         Container(
@@ -43,17 +43,9 @@ class _ListViewItState extends State<ListViewIt> {
               ],
             ),
             subtitle: Text("Le Burger Seigneur"),
-            trailing: FlatButton(
-              color: Colors.green,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(18.0),
-                  side: BorderSide(color: Colors.green)),
-              onPressed: () => {},
-              child: Text(
-                "Veiw Cart",
-                style:
-                    TextStyle(fontWeight: FontWeight.w800, color: Colors.white),
-              ),
+            trailing: Image.asset(
+              "./assests/images/view_cart.png",
+              width: 120,
             ),
             isThreeLine: true,
           ),

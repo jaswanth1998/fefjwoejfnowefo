@@ -19,7 +19,17 @@ class _RoundedVechicleState extends State<RoundedVechicle> {
       onTap: () => {Navigator.pushNamed(context, '/vScreen')},
       child: Column(
         children: [
-          Image.asset(imgUrl, fit: BoxFit.cover, height: 80),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+              decoration: BoxDecoration(
+                color: Colors.black,
+                boxShadow: [
+                  BoxShadow(color: Colors.black, spreadRadius: 3),
+                ],
+              ),
+              child: Image.asset(imgUrl, fit: BoxFit.cover, height: 80)),
           // Container(
           //   width: 75,
           //   height: 75,
